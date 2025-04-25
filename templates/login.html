@@ -12,7 +12,7 @@
 
 </head>
     <body style="background-image: url('/static/background/background.jpg'); background-size: cover;">
-        <form class="form", id="loginForm">
+        <form class="form" id="loginForm" method="post" action="/login">
         <p id="heading">Login</p>
         <div class="field">
         <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -31,6 +31,7 @@
         <button class="button2" type="button" id="registerBtn">Register</button>
         </div>
         <button class="button3" id="forgotPasswordBtn">Forgot Password</button>
+        </form>
         <script src="/static/js/login.js"></script>
     </body>
 </html>

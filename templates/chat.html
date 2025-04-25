@@ -8,8 +8,31 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/static/css/chat.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div id="chat-container">
+        <header id="chat-header">
+            <h1>Chat Room</h1>
+            <div class="header-user-area">
+                <span id="user-id-display"></span>
+                <button id="logout-button">Logout</button>
+            </div>
+        </header>
+        <div id="chat-messages">
+    
+        </div>
+        <footer id="chat-input-area">
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button id="send-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+            </button>
+        </footer>
+    </div>
+
+    <script src="/static/js/chat.js"></script>
 </body>
 </html>

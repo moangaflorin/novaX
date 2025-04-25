@@ -25,8 +25,6 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 
-USER_CREDENTIALS = {'username': 'admin', 'password': 'password123'}
-
 
 class LoginRequest(BaseModel):
     username: str
