@@ -34,6 +34,9 @@ window.onload = () => {
                 const data = await response.json();
 
                 if (response.ok) {
+                    // Store username in localStorage
+                    localStorage.setItem('chatUsername', data.username);
+                    console.log("Username stored:", data.username);
                     window.location.href = "/chat";  
                 } else {
                     alert(data.detail);

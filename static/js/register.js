@@ -7,7 +7,7 @@ document.getElementById("registerBtn").addEventListener("click", async function(
     const confirm_password = document.getElementById("confirm_password").value;
 
     try {
-        const response = await fetch("http://localhost:8000/register", {
+        const response = await fetch("/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -23,6 +23,9 @@ document.getElementById("registerBtn").addEventListener("click", async function(
         const data = await response.json();
 
         if (response.ok) {
+            // Store username in localStorage after successful registration
+            localStorage.setItem('chatUsername', username);
+            console.log("Username stored after registration:", username);
             window.location.href = "/chat";  
         } else {
             alert(data.detail || "An unknown error occurred.");
